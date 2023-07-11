@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Fasthand&family=Kablammo&display=swap');
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+	font-family: 'Agdasima', sans-serif;
+	background: url('../kepek/bg.jpg') #fff no-repeat;
+	font-size:25px;
+	background-size: cover;
+}
+h1{
+	font-family: 'Fasthand', cursive;
+	text-align: center;
+	font-size: 80px;
+	border-top: 2px dashed rgba(0,0,0,.2);
+	border-bottom: 2px dashed rgba(0,0,0,.2);
+	padding:10px 0;
+	margin: 20px 0;
+	background: rgba(255,255,255,.8);
+	color: #3b6a2a;
+}
+.wrapper{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.content {
+	display: flex;	
+}
