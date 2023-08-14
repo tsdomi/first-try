@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Tilt+Prism&display=swap');
+*{
+	box-sizing: border-box;
+}
+body{
+	margin:0;
+	background: url('../pic/bg.jpg');
+}
+.wrapper{
+	background: white;
+	width: 90vw;
+	max-width: 1200px;
+	margin: 0 auto 40px;
+}
+.fej{
+	display: flex;
+	justify-content: space-between;
+	height: 105px;
+	height: 100%;
+}
+nav{
+	background: #545861;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+}
+nav h1 a{
+	text-decoration: none;
+	color: #11f5f5;
+
+}
+nav h1{
+	float: left;
+	margin: 1em 0 1em 1em;
+	font-size: 2em;
+    font-family: 'Tilt Prism', cursive;
+	color: #11f5f5;
+}
+nav h1:hover{
+	cursor: pointer;
+}
+nav ul{
+	list-style: none;
+	float: right;
+	margin: auto 2em;
+	right: 0;
+}
+nav ul li a:hover{
+	background: rgba(0,0,0,.4);
+	cursor: pointer;
+}
+nav ul li{
+	float: right;
+	border-right: 1px solid rgba(0,0,0,.2);
+	padding: 1em 0
+	
+}
+nav ul li a{
+	color: white;
+	padding: 1em 1em;
+	text-decoration: none;
+}
+nav::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+.bemutat{
+	display: flex;
+	background: rgb(66,66,162);
+	background: linear-gradient(90deg, rgba(66,66,162,1) 16%, rgba(37,201,202,1) 41%, rgba(0,212,255,1) 90%);
+}
+.tex{
+	max-width: 40vw;
+}
+.tex h2{
+	font-size: 5vh;
+	margin: 1em 2em;
+	font-family: 'PT Serif';
+	font-weight: 400
+}
+.tex p{
+	margin: 0 1em 0.5em 2em;
+	font-size: 2.5vh;
+	line-height: 1.5em;
+}
+.tex ul{
+	list-style: none;
+	margin: 0 1em 0 2em;
+	font-size: 2.5vh;
+	line-height: 1.7em;
+}
+.tex a{
+	color: black;
+	text-decoration: none;
+}
+.tex ul li::after{
+	content:" →"
+}
+.content{
+	position: relative;
+	width: 50vw;
+	max-width: 550px;
+	height: 500px;
+	overflow: hidden;
+}
+.content .kepek{
+	position: absolute;
+	left: 1em;
+	width: 500px;
+	height: 500px;
+	border-radius: 50% 50%;
+	overflow: hidden;
+}
+.pic{
+	position: absolute;
+	object-fit: cover;
+	width: 500px;
+	height: 500px;
+	background-repeat: no-repeat;
+	border-radius: 50% 50%;
+}
+@media only screen and (max-width: 1050px){
+	.pic{
+		top: 2.5em;
+		width: 400px;
+		height: 400px;
+		border-radius: 0;
+	}
+	.content .kepek{
+		border-radius: 0;
+	}
+}
+@media only screen and (max-width: 880px){
+	.pic{
+		top: 4em;
+		width: 300px;
+		height: 300px;
+		border-radius: 0;
+	}
+	.content .kepek{
+		border-radius: 0;
+	}
+}
+@media only screen and (max-width: 670px){
+	.content{
+		display: none;
+	}
+	.tex{
+		max-width: 90vw;
+	}
+}
+.pic1{
+	background: url('../pic/unnaed.jpg') no-repeat;
+	background-size: 100%;
+	animation-name: pic1;
+	animation-duration: 15s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+.pic2{
+	background: url('../pic/kép.png') no-repeat; 
+	background-size: cover;
+	animation-name: pic2;
+	animation-duration: 15s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+.pic3{
+	background: url('../pic/pic1.png');
+	background-size: cover;
+	animation-name: pic3;
+	animation-duration: 15s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+@keyframes pic1{
+	0% {z-index: 2; left: 500px}
+	15% {left: 1em; z-index: 2 }
+	100% {left: 1em}
+}
+@keyframes pic2{
+	0%,33% {z-index: 3; left: 500px}
+	48% {left: 1em}
+	66% {z-index: 1}
+	100% {left: 1em}
+}
+@keyframes pic3{
+	0%{left: 1em}
+	36%{visibility: hidden; left: 1em}
+	50% {z-index: 0;visibility: hidden; left: 500px}
+	66% {left: 500px; visibility: visible; z-index: 2}
+	81%, 100% {left: 1em; z-index: 2}
+}
